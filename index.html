@@ -23,7 +23,6 @@
 </head>
 <body>
     <img id="playImage" src="image.png" alt="Click to play sound">
-
     <audio id="sound" src="Ston.mp3"></audio>
 
     <script>
@@ -31,7 +30,7 @@
         const sound = document.getElementById('sound');
 
         img.addEventListener('click', () => {
-            sound.currentTime = 0; // Перемотать на начало
+            sound.currentTime = 0;
             sound.play();
         });
     </script>
