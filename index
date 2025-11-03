@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sound on Click</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+        }
+        img {
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <img id="playImage" src="image.png" alt="Click to play sound">
+
+    <audio id="sound" src="Ston.mp3"></audio>
+
+    <script>
+        const img = document.getElementById('playImage');
+        const sound = document.getElementById('sound');
+
+        img.addEventListener('click', () => {
+            sound.currentTime = 0; // Перемотать на начало
+            sound.play();
+        });
+    </script>
+</body>
+</html>
